@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { Input } from './components/input'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,10 +12,8 @@ function App() {
       <main className='form-pessoa'>
         <h2>Cadastro de Alunos</h2>
         <form className="row g-3" action="">
-          <div className='col-md-9'>
-            <label htmlFor="nomeCompleto" className='form-label'>Nome Completo</label>
-            <input type="text" className='form-control' id='nomeCompleto' placeholder="Seu nome completo" />
-          </div>
+          <Input inputSize={9} label='Nome Completo' id='nomeCompleto' placeholder='Seu nome completo' />
+          
           <div className='col-md-3'>
             <label htmlFor="dataNasc" className='form-label'>Data Nasc.</label>
             <input type="date" className='form-control' id='dataNasc' />
@@ -51,7 +50,7 @@ function App() {
           </div>
           <div className="col-md-8">
             <label htmlFor="email" className='form-label'>E-mail</label>
-            <input type="email" className='form-control' id='inputEmail4' />
+            <input type="email" className='form-control' id='inputEmail4' placeholder="Seu e-mail"/>
           </div>
           <div className="col-md-4">
             <label htmlFor="senha" className='form-label'>Senha</label>
