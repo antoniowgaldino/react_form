@@ -125,7 +125,13 @@ function App() {
           />
 
           <Button inputSize={2} label='Cadastrar' type='submit' cor='btn-success' />
-          <Button inputSize={2} label='Limpar' type='reset' cor='btn-warning' />
+          <Button inputSize={2} label='Limpar' type='reset' cor='btn-warning' onClick={e => setFormData({})} />
+
+          <div className='mt-4' style={{color: '#000', textAlign:'left'}}>
+            <h4>Dados JSON</h4>
+            <pre>{JSON.stringify(formData, null, 2)}</pre>
+          </div>
+          
         </form>
       </main>
     </>
